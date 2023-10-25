@@ -10,4 +10,4 @@ jobs:
     - name: checkout code
       uses: actions/checkout@v2
     - name: Run Shared Action
-      uses: aditi7gupta7/com-repo-3-35/.github/workflows/main.yml
+      uses: aditi7gupta7/com-repo-3-35/.github/workflows/main
