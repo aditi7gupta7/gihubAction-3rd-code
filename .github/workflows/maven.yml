@@ -14,11 +14,7 @@ jobs:
     steps:
       - name: Trigger common workflow
         uses: actions/checkout@v2
-      - name: Set the event
-        id: event-name
-        run: echo"::set-output name=name::custom-event"
       - name: Dispact workflow in the common repository
         uses: peter-evans/repository-dispatch@v1
         with:
           repository: aditi7gupta7/github-action-common-repo-final
-          event-type: ${{ steps.event-name.outputs.name }}
