@@ -12,7 +12,12 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v2
-
+        
       - name: use common workflow
-        uses: aditi7gupta7/github-action-common-repo-final/.github/workflows/trigger-common-workflow.yml
+        uses: actions/checkout@v2
+        with: 
+          repository: aditi7gupta7/github-action-common-repo-final
+          ref: main
+          path: .github/workflows
+          token: ${{ secrets.COMMON_REPO_PAT }}
 
