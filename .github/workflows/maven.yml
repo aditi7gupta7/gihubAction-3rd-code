@@ -7,12 +7,12 @@ on:
   
 
 jobs:
-  trigger_common_workflow:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger common workflow
-	    run: |
-        curl -X POST \
-          -H "Accept: application/vnd.github.everest-preview+json" \
-          -H "Authorization: token $COMMON_REPO_PAT \
-          https://api.github.com/repos/aditi7gupta7/github-action-common-repo-final/dispatches
+      - name: checkout code
+        uses: actions/checkout@v2
+
+      - name: use common workflow
+        uses: aditi7gupta7/github-action-common-repo-final/.github/workflows/trigger-common-workflow.yml
+
