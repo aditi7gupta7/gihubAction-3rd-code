@@ -18,3 +18,4 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
           repository: aditi7gupta7/github-action-common-repo-final
+          token: ${{ secrets.COMMON_REPO_PAT }}
